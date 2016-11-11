@@ -342,7 +342,8 @@ class MainFrame(urwid.Frame):
                     # search box does nothing.
                     pass
             self.suppress_focus = True
-            self.filter(self.search_box.edit_text)
+            self.search_box.set_edit_text("")
+            self.search_box.set_autocomplete_text("")
             return None
 
         elif key in ["ctrl x"]:
